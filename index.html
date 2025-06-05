@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoExplorer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <div class="logo">
+                <h1><i class="fas fa-globe-americas"></i> GeoExplorer</h1>
+            </div>
+            <div class="tagline">Découvrez les merveilles de notre planète, des terres de l'amerique aux savanes africaines</div>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Rechercher un pays, une destination...">
+                <button id="search-btn"><i class="fas fa-search"></i> Explorer</button>
+            </div>
+            <div class="filters">
+                <button class="filter-btn active" data-filter="all">Tous</button>
+                <button class="filter-btn" data-filter="africa">Afrique</button>
+                <button class="filter-btn" data-filter="europe">Europe</button>
+                <button class="filter-btn" data-filter="asia">Asie</button>
+                <button class="filter-btn" data-filter="americas">Amériques</button>
+                <button class="filter-btn" data-filter="oceania">Océanie</button>
+            </div>
+        </header>
+        
+        <main class="view-container">
+            <div id="content">
+                <div class="loading">
+                    <i class="fas fa-spinner"></i> Chargement des destinations...
+                </div>
+            </div>
+        </main>
+        
+        <div class="historical-section">
+            <h3><i class="fas fa-history"></i> L'Histoire des Explorations</h3>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">1444</div>
+                    <div class="timeline-content">Découverte des îles du Cap-Vert par Dinis Dias</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1488</div>
+                    <div class="timeline-content">Bartolomeu Dias atteint l'océan Indien en contournant le cap de Bonne-Espérance</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1492</div>
+                    <div class="timeline-content">Christophe Colomb atteint les Caraïbes, découvrant le "Nouveau Monde"</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1498</div>
+                    <div class="timeline-content">Vasco de Gama établit une liaison maritime avec l'Inde</div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1522</div>
+                    <div class="timeline-content">Première circumnavigation de la Terre achevée par Juan Sebastián Elcano</div>
+                </div>
+            </div>
+        </div>
+        
+        <footer class="footer">
+            <p>GeoExplorer - Explorer le monde à travers les yeux des grands voyageurs</p>
+            <p>© 2025 - Projet </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
