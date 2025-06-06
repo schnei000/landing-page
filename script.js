@@ -4,7 +4,7 @@ const resultsDiv = document.getElementById('results');
 const loader = document.getElementById('loader');
 
 // API Unsplash
-const UNSPLASH_ACCESS_KEY = "YOUR_UNSPLASH_KEY"; // Remplace ceci par ta clé
+const UNSPLASH_ACCESS_KEY = "YOUR_UNSPLASH_KEY"; 
 
 searchBtn.addEventListener('click', () => {
   const query = searchInput.value.trim();
@@ -16,7 +16,7 @@ searchBtn.addEventListener('click', () => {
 function searchDestination(query) {
   resultsDiv.classList.remove("hidden");
   loader.style.display = "block";
-  resultsDiv.innerHTML = `<div id="loader">⏳ Chargement...</div>`;
+  resultsDiv.innerHTML = `<div id="loader"> Chargement...</div>`;
 
   // Récupérer image de Unsplash
   fetch(`https://api.unsplash.com/search/photos?query=${query}&client_id=${UNSPLASH_ACCESS_KEY}&orientation=landscape&per_page=1`)
@@ -37,7 +37,7 @@ function searchDestination(query) {
               <h2>${query}</h2>
               ${imageUrl ? `<img src="${imageUrl}" alt="${query}">` : "<p>Aucune image trouvée.</p>"}
               <p>${description}</p>
-              ${photographer ? `<small>📸 Photo par ${photographer} (Unsplash)</small>` : ""}
+              ${photographer ? `<small> Photo par ${photographer} (Unsplash)</small>` : ""}
             </div>
           `;
         });
